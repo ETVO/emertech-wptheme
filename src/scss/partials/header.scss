@@ -1,0 +1,104 @@
+$homepage-header-bg: #000000d9;
+$header-bg: #111;
+$header-bg-hover: unset;
+$header-fg: #ddd;
+$header-fg-hover: #fff;
+$header-fsize: 17px;
+
+$dropdown-fg: #000;
+$dropdown-fg-hover: #000;
+$nav-fw: 300;
+
+
+body.homepage header {
+    background-color: $header-bg;
+
+    // background-color: $homepage-header-bg;
+    // position: absolute !important;
+    // top: 0;
+    // z-index: 10;
+}
+
+header {
+    background-color: $header-bg;
+    width: 100%;
+
+    .custom-logo {
+        width: 210px;
+        height: auto;
+        
+        path {
+            fill: #ce1000;
+        }
+    }
+    
+    .menu-item {
+        display: flex;
+        font-weight: $nav-fw;
+        text-transform: uppercase;
+        
+        .nav-link {
+            margin: auto;
+            color: $header-fg;
+            font-size: $header-fsize;
+        
+            &:hover, &:active, &:focus {
+                color: $header-fg-hover;
+            }
+        }
+        
+        .dropdown-menu {
+
+            text-align: right;
+            color: $dropdown-fg;
+            // padding: 0;
+            border: none;
+            border-radius: 5px;
+            background-color: $header-fg;
+            
+            .dropdown-item {
+                color: $dropdown-fg;
+
+                &:hover, &:active, &:focus {
+                    background-color: $header-fg-hover;
+                    color: $dropdown-fg-hover;
+                }   
+            }
+            
+            &[data-bs-popper], &.show {
+                top: 90%;
+                left: unset;
+                right: 0;
+                // margin-top: 0.125em;
+            }
+        }
+
+        &.active {
+            .nav-link {
+
+                span {
+                    border-bottom: solid 1px var(--bs-primary);
+                }
+            }
+        }
+    }
+
+    .navbar-toggler {
+        border: none;
+        color: $header-fg;
+    
+        .fa-lg {
+            line-height: unset;
+        }
+    }
+}
+
+body.customize-support.homepage header {
+    // top:32px !important;
+}
+ 
+@media all and (max-width:782px) {
+    body.customize-support.homepage header {
+        top:46px !important;
+    }
+} 
