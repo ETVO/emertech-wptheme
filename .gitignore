@@ -1,7 +1,7 @@
 node_modules/
 .vscode/
-assets/css
-assets/js
+assets/**/css
+assets/**/js
 **/*.html
 **/*.woff
 **/*.woff2
