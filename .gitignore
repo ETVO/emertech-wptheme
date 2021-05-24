@@ -1,6 +1,3 @@
 node_modules/
 .vscode/
-assets/css
-assets/js
-assets/fonts/**/*.js
-assets/fonts/**/*.css
+assets/**/
