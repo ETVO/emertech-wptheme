@@ -1,8 +1,6 @@
 
 
 // Default variable overrides
-$body-bg: #fff;
-$body-color: #000;
 $primary: #ce1000;
 
 $headings-font-family: 'Gotham', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !default;
@@ -11,6 +9,9 @@ $font-family-sans-serif: 'Proxima Nova Alt', 'Segoe UI', Tahoma, Geneva, Verdana
 $dark: #111;
 $light: #fff;
 $secondary: #444;
+
+$body-bg: $dark;
+$body-color: $light;
 
 $font-size-base: 1rem;
 $lead-font-size: $font-size-base * 1;
