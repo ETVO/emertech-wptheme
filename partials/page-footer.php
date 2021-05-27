@@ -13,7 +13,7 @@ $map_aos = 'data-aos="fade" data-aos-delay="400"' . $common_aos;
 
 ?>
 <footer>
-    <div class="container-fluid py-4 px-5 text-light">
+    <div class="container-fluid py-3 py-md-4 px-lg-5 text-light">
         <div class="col-12 col-lg-10 m-auto px-lg-5">
             <div class="d-flex m-auto pb-3">
                     <nav class="navbar navbar-expand-lg m-auto d-none d-lg-block"
@@ -36,19 +36,24 @@ $map_aos = 'data-aos="fade" data-aos-delay="400"' . $common_aos;
                         );
                         ?>
                     </nav>
+                    <div class="backtotop d-block d-lg-none m-auto text-uppercase">
+                        <a href="#head" class="eb-link up">
+                            Voltar ao Topo
+                        </a>
+                    </div>
             </div>
             <div class="row m-auto">
-                <div class="col-12 col-md-6 contact"
+                <div class="col-12 col-md-6 contact px-2 px-md-3"
                 <?php echo $contact_aos; ?>>
                     <div class="title">
                         <h2 class="fs-4 fw-normal">EMERTECH PROJECT</h2>
                     </div>
                     <div class="list fw-light pt-1">
                         <div class="list-item row">
-                            <div class="col-1 icon text-primary pe-0">
+                            <div class="col-1 icon text-primary pe-1">
                                 <div class="fas fa-sm fa-phone-alt"></div>
                             </div>
-                            <div class="col text ps-0">
+                            <div class="col text ps-1">
                                 <a href="tel:+351256991045"
                                 target="_blank">
                                     +351 256 991 045
@@ -56,10 +61,10 @@ $map_aos = 'data-aos="fade" data-aos-delay="400"' . $common_aos;
                             </div>
                         </div>
                         <div class="list-item row">
-                            <div class="col-1 icon text-primary pe-0">
+                            <div class="col-1 icon text-primary pe-1">
                                 <div class="fas fa-sm fa-envelope"></div>
                             </div>
-                            <div class="col text ps-0">
+                            <div class="col text ps-1">
                                 <a href="mailto:geral@emertech.pt"
                                 target="_blank">
                                     geral@emertech.pt
@@ -67,10 +72,10 @@ $map_aos = 'data-aos="fade" data-aos-delay="400"' . $common_aos;
                             </div>
                         </div>
                         <div class="list-item row">
-                            <div class="col-1 icon text-primary pe-0">
+                            <div class="col-1 icon text-primary pe-1">
                                 <div class="fas fa-sm fa-map-marker-alt"></div>
                             </div>
-                            <div class="col text ps-0">
+                            <div class="col text ps-1">
                                 <a href="https://www.google.com/maps/place/R.+Prof.+Dr.+Egas+Moniz+269,+3860-078+Avanca"
                                 target="_blank">
                                     R. Prof. Dr. Egas Moniz 269, 3860-078 Avanca
