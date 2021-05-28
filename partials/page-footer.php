@@ -49,36 +49,36 @@ $map_aos = 'data-aos="fade" data-aos-delay="400"' . $common_aos;
                         <h2 class="fs-4 fw-normal">EMERTECH PROJECT</h2>
                     </div>
                     <div class="list fw-light pt-1">
-                        <div class="list-item row">
-                            <div class="col-1 icon text-primary pe-1 pe-lg-0">
+                        <div class="list-item d-flex">
+                            <div class="icon text-primary pe-1">
                                 <!-- <div class="fas fa-sm fa-phone-alt"></div> -->
                                 <i class="bi bi-telephone-fill"></i>
                             </div>
-                            <div class="col text ps-1">
+                            <div class="text ps-2 ps-md-1">
                                 <a href="tel:+351256991045"
                                 target="_blank">
                                     +351 256 991 045
                                 </a>
                             </div>
                         </div>
-                        <div class="list-item row">
-                            <div class="col-1 icon text-primary pe-1 pe-lg-0">
+                        <div class="list-item d-flex">
+                            <div class="icon text-primary pe-1">
                                 <!-- <div class="fas fa-sm fa-envelope"></div> -->
                                 <i class="bi bi-envelope-fill"></i>
                             </div>
-                            <div class="col text ps-1">
+                            <div class="text ps-2 ps-md-1">
                                 <a href="mailto:geral@emertech.pt"
                                 target="_blank">
                                     geral@emertech.pt
                                 </a>
                             </div>
                         </div>
-                        <div class="list-item row">
-                            <div class="col-1 icon text-primary pe-1 pe-lg-0">
+                        <div class="list-item d-flex">
+                            <div class="icon text-primary pe-1">
                                 <!-- <div class="fas fa-sm fa-map-marker-alt"></div> -->
                                 <i class="bi bi-pin-angle-fill"></i>
                             </div>
-                            <div class="col text ps-1">
+                            <div class="text ps-2 ps-md-1">
                                 <a href="https://www.google.com/maps/place/R.+Prof.+Dr.+Egas+Moniz+269,+3860-078+Avanca"
                                 target="_blank">
                                     R. Prof. Dr. Egas Moniz 269, 3860-078 Avanca
