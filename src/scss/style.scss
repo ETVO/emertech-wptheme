@@ -79,6 +79,10 @@ p {
     }
 }
 
+iframe {
+    max-width: 100%;
+}
+
 @media all and (max-width: 1024px) {
     .content-max-width {
         max-width: 80%; 

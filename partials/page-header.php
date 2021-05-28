@@ -11,9 +11,9 @@
 			<?php the_custom_logo(); ?>
 		</div>
 
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenuDropdown" aria-controls="mainMenuDropdown" aria-expanded="false" aria-label="<?php echo __("Ativar Menu", "emertech") ?>">
+		<button class="navbar-toggler p-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenuDropdown" aria-controls="mainMenuDropdown" aria-expanded="false" aria-label="<?php echo __("Ativar Menu", "emertech") ?>">
 			<!-- <span class="navbar-toggler-icon"></span> -->
-			<i class="fas fa-lg fa-bars"></i>
+			<span class="icon bi bi-list"></span>
 		</button>
 
 		<?php

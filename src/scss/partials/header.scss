@@ -31,6 +31,12 @@ header {
             fill: #ce1000;
         }
     }
+
+    .navbar-toggler {
+        .icon {
+            font-size: 1.8rem;
+        }
+    }
     
     .menu-item {
         display: flex;
@@ -92,13 +98,13 @@ header {
         }
     }
 }
-
-body.customize-support.homepage header {
-    // top:32px !important;
-}
  
-@media all and (max-width:782px) {
-    body.customize-support.homepage header {
-        top:46px !important;
+@media all and (max-width:768px) {
+    
+    header {
+
+        .custom-logo {
+            width: 180px;
+        }
     }
 } 

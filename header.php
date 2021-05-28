@@ -21,6 +21,8 @@ if(is_front_page()) {
 </head>
 <body class="<?php echo $body_class; ?>">
 
+    <div id="head"></div>
+
 	<?php wp_body_open(); ?>
 
     <?php get_template_part("partials/page-header"); ?>

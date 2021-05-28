@@ -13,7 +13,7 @@ $map_aos = 'data-aos="fade" data-aos-delay="400"' . $common_aos;
 
 ?>
 <footer>
-    <div class="container-fluid py-3 py-md-4 px-lg-5 text-light">
+    <div class="container-fluid py-4 py-md-4 px-lg-5 text-light">
         <div class="col-12 col-lg-10 m-auto px-lg-5">
             <div class="d-flex m-auto pb-3">
                     <nav class="navbar navbar-expand-lg m-auto d-none d-lg-block"
@@ -105,7 +105,6 @@ $map_aos = 'data-aos="fade" data-aos-delay="400"' . $common_aos;
                 </div>
                 <div class="col-6 d-none d-md-block map p-0"
                 <?php echo $map_aos; ?>>
-                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6039.950962607596!2d-8.598888067005323!3d40.806532579321754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2384c9da0d6691%3A0xfb5a12c984461e62!2sR.%20Prof.%20Dr.%20Egas%20Moniz%20269%2C%203860-078%20Avanca!5e0!3m2!1sen!2spt!4v1621035410180!5m2!1sen!2spt" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
                     <iframe frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Emertech Project,+R.+Prof.+Dr.+Egas+Moniz+269,+3860-078+Avanca&t=m&z=13&output=embed&iwloc=near" title="Emertech Project - R. Prof. Dr. Egas Moniz 269, 3860-078 Avanca" aria-label="Emertech Project - R. Prof. Dr. Egas Moniz 269, 3860-078 Avanca"></iframe>
                 </div>
             </div>

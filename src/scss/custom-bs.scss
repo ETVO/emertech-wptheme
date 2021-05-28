@@ -44,3 +44,8 @@ $h6-font-size: $font-size-base !default;
         transition: transform .2s ease-in-out;
     }
 }
+
+.form-control {
+    background-color: var(--bs-dark) !important;
+    color: var(--bs-light) !important;
+}
