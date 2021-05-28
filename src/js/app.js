@@ -21,4 +21,29 @@ jQuery(document).ready(function ($) {
             $(this).find('.dropdown-menu').removeClass('show');
         });
     });
+
+
+    // Add icons classes to each class
+    // $('.eb-link').each(function () {
+
+    //     if(!$(this).hasClass("no-ico")) 
+    //         $(this).addClass("bi");
+    //     else 
+    //         return;
+
+    //     var $isRight = $(this).hasClass("right");
+    //     var $isLeft = $(this).hasClass("left");
+    //     var $isUp = $(this).hasClass("up");
+    //     var $isDown = $(this).hasClass("down");
+
+    //     var direction = ($isRight) ? "right" : 
+    //     ($isLeft) ? "left" : 
+    //     ($isDown) ? "down" :
+    //     ($isUp) ? "up" : "right"; 
+
+    //     var className = "bi-arrow-";
+    //     className += direction;
+        
+    //     $(this).addClass(className);
+    // });
 });

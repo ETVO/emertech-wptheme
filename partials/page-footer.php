@@ -50,8 +50,9 @@ $map_aos = 'data-aos="fade" data-aos-delay="400"' . $common_aos;
                     </div>
                     <div class="list fw-light pt-1">
                         <div class="list-item row">
-                            <div class="col-1 icon text-primary pe-1">
-                                <div class="fas fa-sm fa-phone-alt"></div>
+                            <div class="col-1 icon text-primary pe-1 pe-lg-0">
+                                <!-- <div class="fas fa-sm fa-phone-alt"></div> -->
+                                <i class="bi bi-telephone-fill"></i>
                             </div>
                             <div class="col text ps-1">
                                 <a href="tel:+351256991045"
@@ -61,8 +62,9 @@ $map_aos = 'data-aos="fade" data-aos-delay="400"' . $common_aos;
                             </div>
                         </div>
                         <div class="list-item row">
-                            <div class="col-1 icon text-primary pe-1">
-                                <div class="fas fa-sm fa-envelope"></div>
+                            <div class="col-1 icon text-primary pe-1 pe-lg-0">
+                                <!-- <div class="fas fa-sm fa-envelope"></div> -->
+                                <i class="bi bi-envelope-fill"></i>
                             </div>
                             <div class="col text ps-1">
                                 <a href="mailto:geral@emertech.pt"
@@ -72,8 +74,9 @@ $map_aos = 'data-aos="fade" data-aos-delay="400"' . $common_aos;
                             </div>
                         </div>
                         <div class="list-item row">
-                            <div class="col-1 icon text-primary pe-1">
-                                <div class="fas fa-sm fa-map-marker-alt"></div>
+                            <div class="col-1 icon text-primary pe-1 pe-lg-0">
+                                <!-- <div class="fas fa-sm fa-map-marker-alt"></div> -->
+                                <i class="bi bi-pin-angle-fill"></i>
                             </div>
                             <div class="col text ps-1">
                                 <a href="https://www.google.com/maps/place/R.+Prof.+Dr.+Egas+Moniz+269,+3860-078+Avanca"
@@ -87,13 +90,15 @@ $map_aos = 'data-aos="fade" data-aos-delay="400"' . $common_aos;
                         <div class="icon pe-3">
                             <a href="https://www.facebook.com/emertechproject"
                             target="_blank">
-                                <i class="fab fa-lg fa-facebook-f"></i>
+                                <!-- <i class="fab fa-lg fa-facebook-f"></i> -->
+                                <i class="bi bi-facebook"></i>
                             </a>
                         </div>
                         <div class="icon">
                             <a href="https://www.instagram.com/emertechproject/"
                             target="_blank">
-                                <i class="fab fa-lg fa-instagram"></i>
+                                <!-- <i class="fab fa-lg fa-instagram"></i> -->
+                                <i class="bi bi-instagram"></i>
                             </a>
                         </div>
                     </div>

@@ -188,7 +188,8 @@ final class Emertech_Theme {
 		wp_deregister_style( 'font-awesome' );
 
 		// Load fonts stylesheets
-		wp_enqueue_style( 'fontawesome', EMERTECH_FONT_DIR_URI . '/fontawesome/css/all.min.css', false, '5.15.1' );
+		// wp_enqueue_style( 'fontawesome', EMERTECH_FONT_DIR_URI . '/fontawesome/css/all.min.css', false, '5.15.1' );
+		wp_enqueue_style( 'bootstrap-icons', EMERTECH_FONT_DIR_URI . '/bootstrap-icons/bootstrap-icons.css', false, '5.0.0' );
         
         // Register Custom Bootstrap  
         wp_enqueue_style("emertech-custom-bs", $dir . "custom-bs.css", false, $theme_version);
@@ -235,7 +236,8 @@ final class Emertech_Theme {
 		wp_deregister_style( 'font-awesome' );
 
 		// Load font awesome style
-		wp_enqueue_style( 'fontawesome', EMERTECH_FONT_DIR_URI . '/fontawesome/css/all.min.css', false, '5.15.1' );
+		// wp_enqueue_style( 'fontawesome', EMERTECH_FONT_DIR_URI . '/fontawesome/css/all.min.css', false, '5.15.1' );
+		wp_enqueue_style( 'bootstrap-icons', EMERTECH_FONT_DIR_URI . '/bootstrap-icons/bootstrap-icons.css', false, '5.0.0' );
         
         // Register Custom Bootstrap  
         // wp_enqueue_style("emertech-admin-bootstrap-style", $dir . "admin-bs.css", false, $theme_version);

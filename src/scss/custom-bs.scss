@@ -25,3 +25,22 @@ $h6-font-size: $font-size-base !default;
 
 // Required
 @import "../../node_modules/bootstrap/scss/bootstrap"; 
+
+.accordion-button {
+    $icon-width: 1.5rem;
+
+    &::after {
+        transition: transform .2s ease-in-out;
+    
+        content: "\f282" !important;
+        font-family: bootstrap-icons !important;
+        font-size: $icon-width !important;
+        background-image: unset !important;
+    
+        flex-shrink: 0;
+        margin-left: auto;
+        margin-right: 10px;
+    
+        transition: transform .2s ease-in-out;
+    }
+}
