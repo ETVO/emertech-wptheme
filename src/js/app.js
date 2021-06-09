@@ -1,4 +1,5 @@
-// import "bootstrap";
+import "./partials/header.js";
+
 import AOS from "aos";
 
 AOS.init({

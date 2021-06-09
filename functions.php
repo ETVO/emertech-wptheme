@@ -6,14 +6,14 @@
  */
 
 // Exit if accessed directly.
-if ( ! defined( 'ABSPATH' ) ) {
+if ( ! defined( "ABSPATH" ) ) {
 	exit;
 }
 
 // Core constants 
-define("EMERTECH_THEME_DIR", get_template_directory());
-define("EMERTECH_THEME_URI", get_template_directory_uri());
-define("EMERTECH_THEME_CLASS", "Emertech_Theme");
+define( "EMERTECH_THEME_DIR", get_template_directory());
+define( "EMERTECH_THEME_URI", get_template_directory_uri());
+define( "EMERTECH_THEME_CLASS", "Emertech_Theme" );
 
 /**
  * Emertech Theme class
@@ -32,21 +32,25 @@ final class Emertech_Theme {
 
         // Load theme function files
         $this->emertech_setup();
+
+		// Load theme classes
+		add_action( "after_setup_theme", array( EMERTECH_THEME_CLASS, "classes" ), 4 );
             
-        add_action("after_setup_theme", array(EMERTECH_THEME_CLASS, "theme_setup"));
+        // Setup theme (theme support, nav menus, etc.)
+        add_action( "after_setup_theme", array( EMERTECH_THEME_CLASS, "theme_setup" ) );
 
         if(is_admin()) {
-            add_action( "admin_enqueue_scripts", array( EMERTECH_THEME_CLASS, "theme_admin_css") );
-            add_action( "admin_enqueue_scripts", array( EMERTECH_THEME_CLASS, "theme_admin_js") );
+            add_action( "admin_enqueue_scripts", array( EMERTECH_THEME_CLASS, "theme_admin_css" ) );
+            add_action( "admin_enqueue_scripts", array( EMERTECH_THEME_CLASS, "theme_admin_js" ) );
         }   
         else {
-            add_action( "login_enqueue_scripts", array(EMERTECH_THEME_CLASS, "emertech_login_style") );
-            add_action( "wp_enqueue_scripts", array( EMERTECH_THEME_CLASS, "theme_css") );
-            add_action( "wp_enqueue_scripts", array( EMERTECH_THEME_CLASS, "theme_js") );
-            add_action( "wp_enqueue_scripts", array( EMERTECH_THEME_CLASS, "theme_fonts") );
+            add_action( "login_enqueue_scripts", array(EMERTECH_THEME_CLASS, "emertech_login_style" ) );
+            add_action( "wp_enqueue_scripts", array( EMERTECH_THEME_CLASS, "theme_css" ) );
+            add_action( "wp_enqueue_scripts", array( EMERTECH_THEME_CLASS, "theme_js" ) );
+            add_action( "wp_enqueue_scripts", array( EMERTECH_THEME_CLASS, "theme_fonts" ) );
         }
 
-        add_action("wp_head", array(EMERTECH_THEME_CLASS, "head_code"));
+        add_action( "wp_head", array(EMERTECH_THEME_CLASS, "head_code" ));
     }
 
     /**
@@ -58,21 +62,21 @@ final class Emertech_Theme {
 
         $version = self::theme_version();
 
-        define("EMERTECH_THEME_VERSION", $version);
+        define( "EMERTECH_THEME_VERSION", $version);
 
         // JavaScript and CSS paths
-        define("EMERTECH_JS_DIR_URI", EMERTECH_THEME_URI . "/assets/js/");
-        define("EMERTECH_CSS_DIR_URI", EMERTECH_THEME_URI . "/assets/css/");
+        define( "EMERTECH_JS_DIR_URI", EMERTECH_THEME_URI . "/assets/js/" );
+        define( "EMERTECH_CSS_DIR_URI", EMERTECH_THEME_URI . "/assets/css/" );
 
         // Images path
-        define("EMERTECH_IMG_DIR_URI", EMERTECH_THEME_URI . "/assets/img/");
+        define( "EMERTECH_IMG_DIR_URI", EMERTECH_THEME_URI . "/assets/img/" );
 
         // Fonts path
-        define("EMERTECH_FONT_DIR_URI", EMERTECH_THEME_URI . "/assets/fonts/");
+        define( "EMERTECH_FONT_DIR_URI", EMERTECH_THEME_URI . "/assets/fonts/" );
 
 		// Include Paths.
-		define( 'EMERTECH_INC_DIR', EMERTECH_THEME_DIR . '/inc/' );
-		define( 'EMERTECH_INC_DIR_URI', EMERTECH_THEME_URI . '/inc/' );
+		define( "EMERTECH_INC_DIR", EMERTECH_THEME_DIR . "/inc/" );
+		define( "EMERTECH_INC_DIR_URI", EMERTECH_THEME_URI . "/inc/" );
     }
 
     /**
@@ -96,20 +100,20 @@ final class Emertech_Theme {
      */
     public function theme_setup() {
         // Let WordPress handle Title Tag
-        add_theme_support('title-tag');
+        add_theme_support( "title-tag");
 
 		/**
 		 * Enable support for site logo
 		 */
 		add_theme_support(
-			'custom-logo',
+			"custom-logo",
 			apply_filters(
-				'ocean_custom_logo_args',
+				"ocean_custom_logo_args",
 				array(
-					'height'      => 90,
-					'width'       => 209,
-					'flex-height' => true,
-					'flex-width'  => true,
+					"height"      => 90,
+					"width"       => 209,
+					"flex-height" => true,
+					"flex-width"  => true,
 				)
 			)
 		);
@@ -117,10 +121,10 @@ final class Emertech_Theme {
         // Register navigation menus.
 		register_nav_menus(
 			array(
-				'topbar_menu' => esc_html__( 'Top Bar', 'emertech' ),
-				'main_menu'   => esc_html__( 'Main', 'emertech' ),
-				'footer_menu' => esc_html__( 'Footer', 'emertech' ),
-				'mobile_menu' => esc_html__( 'Mobile (optional)', 'emertech' ),
+				"topbar_menu" => esc_html__( "Top Bar", "emertech" ),
+				"main_menu"   => esc_html__( "Main", "emertech" ),
+				"footer_menu" => esc_html__( "Footer", "emertech" ),
+				"mobile_menu" => esc_html__( "Mobile (optional)", "emertech" ),
 			)
 		);
     }
@@ -140,17 +144,17 @@ final class Emertech_Theme {
         ?>
            <style>
             #login h1 a, .login h1 a {
-                background-image: url(<?php echo EMERTECH_IMG_DIR_URI; ?>emertech-login-logo.png);
+                background-image: url('<?php echo EMERTECH_IMG_DIR_URI; ?>emertech-login-logo.png');
             }
            </style> 
         <?php
 
         // Enqueue custom style
-        wp_enqueue_style("emertech-login-style", $dir . "login.css", false, $theme_version);
+        wp_enqueue_style( "emertech-login-style", $dir . "login.css", false, $theme_version);
 
         // Add filters 
-        add_filter( 'login_headerurl', array(EMERTECH_THEME_CLASS, 'emertech_login_logo_url') );
-        add_filter( 'login_headertitle', array(EMERTECH_THEME_CLASS, 'emertech_login_logo_url_title') );
+        add_filter( "login_headerurl", array(EMERTECH_THEME_CLASS, "emertech_login_logo_url") );
+        add_filter( "login_headertitle", array(EMERTECH_THEME_CLASS, "emertech_login_logo_url_title") );
     }
 
     /** 
@@ -168,7 +172,7 @@ final class Emertech_Theme {
 	 * @since   1.0
      */
     public function emertech_login_logo_url_title() {
-        return get_bloginfo( 'name' );
+        return get_bloginfo( "name" );
     }
 
     /**
@@ -184,18 +188,18 @@ final class Emertech_Theme {
 		// Get current theme version
         $theme_version = EMERTECH_THEME_VERSION;
         
-		wp_deregister_style( 'fontawesome' );
-		wp_deregister_style( 'font-awesome' );
+		wp_deregister_style( "fontawesome" );
+		wp_deregister_style( "font-awesome" );
 
 		// Load fonts stylesheets
-		// wp_enqueue_style( 'fontawesome', EMERTECH_FONT_DIR_URI . '/fontawesome/css/all.min.css', false, '5.15.1' );
-		wp_enqueue_style( 'bootstrap-icons', EMERTECH_FONT_DIR_URI . '/bootstrap-icons/bootstrap-icons.css', false, '5.0.0' );
+		// wp_enqueue_style( "fontawesome", EMERTECH_FONT_DIR_URI . "/fontawesome/css/all.min.css", false, "5.15.1" );
+		wp_enqueue_style( "bootstrap-icons", EMERTECH_FONT_DIR_URI . "/bootstrap-icons/bootstrap-icons.css", false, "5.0.0" );
         
         // Register Custom Bootstrap  
-        wp_enqueue_style("emertech-custom-bs", $dir . "custom-bs.css", false, $theme_version);
+        wp_enqueue_style( "emertech-custom-bs", $dir . "custom-bs.css", false, $theme_version);
 
         // Register Emertech Theme main style 
-        wp_enqueue_style("emertech-style", $dir . "style.css", false, $theme_version);
+        wp_enqueue_style( "emertech-style", $dir . "style.css", false, $theme_version);
 
     }
 
@@ -213,10 +217,10 @@ final class Emertech_Theme {
 		$theme_version = EMERTECH_THEME_VERSION;
         
 		// Register theme script
-		wp_enqueue_script('emertech-script', $dir . 'app.js', array('jquery'), $theme_version, true);
+		wp_enqueue_script( "emertech-script", $dir . "app.js", array( "jquery"), $theme_version, true);
         
 		// Register bootstrap script
-		wp_enqueue_script('bootstrap', $dir . 'third/bootstrap.min.js', array('jquery'), $theme_version, true);
+		wp_enqueue_script( "bootstrap", $dir . "third/bootstrap.min.js", array( "jquery"), $theme_version, true);
     }
 
     /**
@@ -232,15 +236,15 @@ final class Emertech_Theme {
 		// Get current theme version
         $theme_version = EMERTECH_THEME_VERSION;
         
-		wp_deregister_style( 'fontawesome' );
-		wp_deregister_style( 'font-awesome' );
+		wp_deregister_style( "fontawesome" );
+		wp_deregister_style( "font-awesome" );
 
 		// Load font awesome style
-		// wp_enqueue_style( 'fontawesome', EMERTECH_FONT_DIR_URI . '/fontawesome/css/all.min.css', false, '5.15.1' );
-		wp_enqueue_style( 'bootstrap-icons', EMERTECH_FONT_DIR_URI . '/bootstrap-icons/bootstrap-icons.css', false, '5.0.0' );
+		// wp_enqueue_style( "fontawesome", EMERTECH_FONT_DIR_URI . "/fontawesome/css/all.min.css", false, "5.15.1" );
+		wp_enqueue_style( "bootstrap-icons", EMERTECH_FONT_DIR_URI . "/bootstrap-icons/bootstrap-icons.css", false, "5.0.0" );
         
         // Register Custom Bootstrap  
-        // wp_enqueue_style("emertech-admin-bootstrap-style", $dir . "admin-bs.css", false, $theme_version);
+        // wp_enqueue_style( "emertech-admin-bootstrap-style", $dir . "admin-bs.css", false, $theme_version);
 
     }
 
@@ -258,7 +262,7 @@ final class Emertech_Theme {
 		$theme_version = EMERTECH_THEME_VERSION;
         
 		// Register admin script
-		// wp_enqueue_script('emertech-script', $dir . 'app.js', array('jquery'), $theme_version, true);
+		// wp_enqueue_script( "emertech-script", $dir . "app.js", array( "jquery"), $theme_version, true);
     }
 
     /**
@@ -275,8 +279,8 @@ final class Emertech_Theme {
 		$theme_version = EMERTECH_THEME_VERSION;
         
         // Register Emertech Theme fonts
-        wp_enqueue_style("emertech-font-proxnova", $dir . "proxima_nova_a/font.css", false, $theme_version);
-        wp_enqueue_style("emertech-font-gotham", $dir . "gotham/font.css", false, $theme_version);
+        wp_enqueue_style( "emertech-font-proxnova", $dir . "proxima_nova_a/font.css", false, $theme_version);
+        wp_enqueue_style( "emertech-font-gotham", $dir . "gotham/font.css", false, $theme_version);
     }
 
     /**
@@ -285,6 +289,17 @@ final class Emertech_Theme {
 	 * @since 
      */
     public function head_code() {
+    }
+
+    /**
+     * Load theme classes
+     *
+     * @return void
+     */
+    public function classes() {
+        
+		// Customizer class.
+		require_once EMERTECH_INC_DIR . "customizer/customizer.php";
     }
 
 	/**
@@ -298,7 +313,7 @@ final class Emertech_Theme {
 		$theme = wp_get_theme();
 
 		// Return theme version.
-		return $theme->get( 'Version' );
+		return $theme->get( "Version" );
 
 	}
 }
