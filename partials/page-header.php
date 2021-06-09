@@ -12,7 +12,7 @@ $video_src = wp_get_attachment_url( $video_id );
 $show_video = get_theme_mod("emertech_logo_video_show");
 $show_video = ( $show_video == "all" || ( $show_video == "home" && is_front_page() ) ); 
 
-if($show_video):
+if(false):
 ?>
 <div class="overlay show-<?php echo $show_video; ?>" id="overlay_bg">
 	<video id="over_video" autoplay muted>
@@ -27,7 +27,7 @@ if($show_video):
 <header class="navbar navbar-expand-lg pe-3 pe-lg-4 ps-0 py-3 text-light">
 	<div data-aos="fade" class="container-fluid p-0">
 		<div class="navbar-brand me-auto p-0">
-			<!--
+			
 			<?php
 				if($show_video == 1) {
 					?>
@@ -45,9 +45,8 @@ if($show_video):
 					the_custom_logo(); 
 				}
 			?> 
-			-->
 			<?php 
-				the_custom_logo(); 
+				// the_custom_logo(); 
 			?>
 		</div>
 

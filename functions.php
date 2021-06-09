@@ -127,6 +127,8 @@ final class Emertech_Theme {
 				"mobile_menu" => esc_html__( "Mobile (optional)", "emertech" ),
 			)
 		);
+        
+        add_shortcode( 'year', [EMERTECH_THEME_CLASS, 'get_current_year'] );
     }
 
     /**
@@ -300,6 +302,11 @@ final class Emertech_Theme {
         
 		// Customizer class.
 		require_once EMERTECH_INC_DIR . "customizer/customizer.php";
+        require_once EMERTECH_INC_DIR . "third/class-kirki-installer-section.php";
+    }
+
+    public function get_current_year($attr) {
+        return date('Y');
     }
 
 	/**

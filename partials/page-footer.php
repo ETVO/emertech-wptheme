@@ -11,6 +11,43 @@ $nav_aos = 'data-aos="fade" data-aos-delay="100"' . $common_aos;
 $contact_aos = 'data-aos="fade" data-aos-delay="300"' . $common_aos;
 $map_aos = 'data-aos="fade" data-aos-delay="400"' . $common_aos;
 
+$contact_no = get_theme_mod("emertech_footer_contact");
+$contact_no_url = "tel:$contact_no";
+
+$email = get_theme_mod("emertech_footer_email");
+$email_url = "mailto:$email";
+
+$address = get_theme_mod("emertech_footer_address");
+$address_url = "https://www.google.com/maps/place/" . str_replace(" ", "+", $address);
+
+$zoom = get_theme_mod( "emertech_footer_map_zoom", 13 );
+
+$show_map = get_theme_mod("emertech_footer_map_show");
+$map = get_theme_mod("emertech_footer_map", $address);
+$map_url = "https://maps.google.com/maps?q=" . str_replace(" ", "+", $map) . "&t=m&z=$zoom&output=embed&iwloc=near"; 
+
+$contact_title = get_theme_mod( 'emertech_footer_title', 'EMERTECH PROJECT' );
+
+$contact_items = array(
+    array(
+        'icon' => 'telephone-fill',
+        'text' => $contact_no,
+        'url' => $contact_no_url,
+    ),
+    array(
+        'icon' => 'envelope-fill',
+        'text' => $email,
+        'url' => $email_url,
+    ),
+    array(
+        'icon' => 'pin-angle-fill',
+        'text' => $address,
+        'url' => $address_url,
+    ),
+);
+
+$social_icons = get_theme_mod("emertech_social_icons");
+
 ?>
 <footer>
     <div class="container-fluid py-4 py-md-4 px-lg-5 text-light">
@@ -46,67 +83,61 @@ $map_aos = 'data-aos="fade" data-aos-delay="400"' . $common_aos;
                 <div class="col-12 col-md-6 contact px-2 px-md-3"
                 <?php echo $contact_aos; ?>>
                     <div class="title">
-                        <h2 class="fs-4 fw-normal">EMERTECH PROJECT</h2>
+                        <h2 class="fs-4 fw-normal"><?php echo $contact_title; ?></h2>
                     </div>
                     <div class="list fw-light pt-1">
-                        <div class="list-item d-flex">
-                            <div class="icon text-primary pe-1">
-                                <!-- <div class="fas fa-sm fa-phone-alt"></div> -->
-                                <i class="bi bi-telephone-fill"></i>
-                            </div>
-                            <div class="text ps-2 ps-md-1">
-                                <a href="tel:+351256991045"
-                                target="_blank">
-                                    +351 256 991 045
-                                </a>
-                            </div>
-                        </div>
-                        <div class="list-item d-flex">
-                            <div class="icon text-primary pe-1">
-                                <!-- <div class="fas fa-sm fa-envelope"></div> -->
-                                <i class="bi bi-envelope-fill"></i>
-                            </div>
-                            <div class="text ps-2 ps-md-1">
-                                <a href="mailto:geral@emertech.pt"
-                                target="_blank">
-                                    geral@emertech.pt
-                                </a>
-                            </div>
-                        </div>
-                        <div class="list-item d-flex">
-                            <div class="icon text-primary pe-1">
-                                <!-- <div class="fas fa-sm fa-map-marker-alt"></div> -->
-                                <i class="bi bi-pin-angle-fill"></i>
-                            </div>
-                            <div class="text ps-2 ps-md-1">
-                                <a href="https://www.google.com/maps/place/R.+Prof.+Dr.+Egas+Moniz+269,+3860-078+Avanca"
-                                target="_blank">
-                                    R. Prof. Dr. Egas Moniz 269, 3860-078 Avanca
-                                </a>
-                            </div>
-                        </div>
+
+                        <?php
+                            foreach($contact_items as $item): 
+
+                                if($item['text'] != ''):
+                                    ?>
+                                        <div class="list-item d-flex">
+                                            <div class="icon text-primary pe-1">
+                                                <i class="bi bi-<?php echo $item['icon']; ?>"></i>
+                                            </div>
+                                            <div class="text ps-2 ps-md-1">
+                                                <a href="<?php echo $item['url']; ?>"
+                                                target="_blank">
+                                                    <?php echo $item['text']; ?>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    <?php
+                                endif;
+
+                            endforeach; 
+                        ?>
+
                     </div>
                     <div class="social d-flex pt-3">
-                        <div class="icon pe-3">
-                            <a href="https://www.facebook.com/emertechproject"
-                            target="_blank">
-                                <!-- <i class="fab fa-lg fa-facebook-f"></i> -->
-                                <i class="bi bi-facebook"></i>
-                            </a>
-                        </div>
-                        <div class="icon">
-                            <a href="https://www.instagram.com/emertechproject/"
-                            target="_blank">
-                                <!-- <i class="fab fa-lg fa-instagram"></i> -->
-                                <i class="bi bi-instagram"></i>
-                            </a>
-                        </div>
+                        
+                        <?php
+                            foreach($social_icons as $icon): 
+
+                                if($icon['url'] != ''):
+                                    ?><div class="icon pe-3">
+                                            <a href="<?php echo $icon['url']; ?>"
+                                            target="_blank">
+                                                <i class="bi bi-<?php echo $icon['icon']; ?>"></i>
+                                            </a>
+                                        </div>
+                                    <?php
+                                endif;
+
+                            endforeach; 
+                        ?>
                     </div>
                 </div>
-                <div class="col-6 d-none d-md-block map p-0"
-                <?php echo $map_aos; ?>>
-                    <iframe frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Emertech Project,+R.+Prof.+Dr.+Egas+Moniz+269,+3860-078+Avanca&t=m&z=13&output=embed&iwloc=near" title="Emertech Project - R. Prof. Dr. Egas Moniz 269, 3860-078 Avanca" aria-label="Emertech Project - R. Prof. Dr. Egas Moniz 269, 3860-078 Avanca"></iframe>
-                </div>
+                <?php if($show_map): ?>
+                    <div class="col-6 d-none d-md-block map p-0"
+                    <?php echo $map_aos; ?>>
+                        <iframe frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" 
+                        src="<?php echo $map_url; ?>" 
+                        title="<?php echo $map; ?>" 
+                        aria-label="<?php echo $map ?>"></iframe>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>

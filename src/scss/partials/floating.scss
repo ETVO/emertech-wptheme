@@ -1,24 +1,27 @@
+$icon-size: 1.5rem;
+$spacing: 15px;
+
 .floating {
     z-index: 1000;
     background-color: var(--bs-primary);
     border-radius: 50%;    
     
     position: fixed;
-    margin: 15px 20px;
+    margin: $spacing $spacing * 1.3;
     margin-left: auto;
     
     right: 0;
     bottom: 0;
 
-    padding: 15px;
+    padding: $spacing;
 
     box-sizing: border-box;
     border-radius: 50%;
     border: solid 1px rgba(0,0,0,0.2);
     box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
 
-    a {
-        font-size: 1.5rem;
-        line-height: 1.5rem;
+    span {
+        font-size: $icon-size;
+        line-height: $icon-size;
     }
 }
