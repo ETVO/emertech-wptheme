@@ -1,6 +1,6 @@
 <?php
 /**
- * Theme header
+ * Theme header template
  * 
  * @package Emertech WordPress theme
  */

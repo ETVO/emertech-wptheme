@@ -1,5 +1,6 @@
 $homepage-header-bg: #000000d9;
 $header-bg: #000;
+$header-bg: #111;
 $header-bg-hover: unset;
 $header-fg: #ddd;
 $header-fg-hover: #fff;
@@ -116,8 +117,8 @@ header {
             }
         }
 
-        // &.active {
-        &:hover, &:active, &:focus {
+        &.active {
+        // &:hover, &:active, &:focus {
             .nav-link {
 
                 span {

@@ -127,6 +127,30 @@ final class Emertech_Theme {
 				"mobile_menu" => esc_html__( "Mobile (optional)", "emertech" ),
 			)
 		);
+
+		// Enable support for Post Formats.
+		add_theme_support( 'post-formats', array( 'video', 'gallery', 'audio', 'quote', 'link' ) );
+
+		// Enable support for <title> tag.
+		add_theme_support( 'title-tag' );
+
+		// Enable support for Post Thumbnails on posts and pages.
+		add_theme_support( 'post-thumbnails' );
+
+		/*
+		 * Switch default core markup for search form, comment form, comments, galleries, captions and widgets
+		 * to output valid HTML5.
+		 */
+		add_theme_support(
+			'html5',
+			array(
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+				'widgets',
+			)
+		);
         
         add_shortcode( 'year', [EMERTECH_THEME_CLASS, 'get_current_year'] );
     }

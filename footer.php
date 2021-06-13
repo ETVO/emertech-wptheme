@@ -1,3 +1,10 @@
+<?php
+/**
+ * Theme footer template
+ * 
+ * @package Emertech WordPress theme
+ */
+?>
 
 <?php get_template_part("partials/floating"); ?>
 

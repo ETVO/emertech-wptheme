@@ -1,0 +1,24 @@
+.search-results {
+    .result {
+        border-bottom: solid 1px var(--bs-secondary);
+        .image {
+            img {
+                width: 300px;
+                max-width: 100%;
+            }
+        }
+
+        .title {
+            color: #ddd;
+            a {
+                font-size: inherit !important;
+                text-decoration: none !important;
+            }
+
+            &:hover {
+                transition: color 0.1s ease;
+                color: white;
+            }
+        }
+    }
+}

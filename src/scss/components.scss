@@ -1,30 +1,29 @@
 .eb-link {
-    text-decoration: none;
     font-weight: 600;
     font-size: 18px;
 
 
     &.dark {
-        color: #222;
+        color: #222 !important;
 
         &:hover, &:active, &:focus {
-            color: #000;
+            color: #000 !important;
         }
     }
 
     &.light {
-        color: #ccc;
+        color: #bbb !important;
 
         &:hover, &:active, &:focus {
-            color: #fff;
+            color: #fff !important;
         }
     }
 
     &.primary {
-        color: var(--bs-primary);
+        color: var(--bs-primary) !important;
 
         &:hover, &:active, &:focus {
-            color: #eee;
+            color: #eee !important;
         }
     }
 

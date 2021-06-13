@@ -2,13 +2,16 @@
 
 // Default variable overrides
 $primary: #ce1000;
+$dark: #111;
+$light: #fff;
+$secondary: #444;
+// $danger: #f11501;
+// $info: #0dcaf0;
+// $warning: #ffc107;
 
 $headings-font-family: 'Gotham', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !default;
 $font-family-sans-serif: 'Proxima Nova Alt', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !default;
 
-$dark: #111;
-$light: #fff;
-$secondary: #444;
 
 $body-bg: $dark;
 $body-color: $light;
