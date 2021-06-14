@@ -51,6 +51,9 @@ final class Emertech_Theme {
         }
 
         add_action( "wp_head", array(EMERTECH_THEME_CLASS, "head_code" ));
+        
+        // Add action to make custom query before loading posts
+        add_action( 'pre_get_posts', array(EMERTECH_THEME_CLASS, 'set_query_params') );
     }
 
     /**
@@ -136,6 +139,10 @@ final class Emertech_Theme {
 
 		// Enable support for Post Thumbnails on posts and pages.
 		add_theme_support( 'post-thumbnails' );
+        
+        // Add different image predefined sizes (NOT BEING USED A.T.M.)
+        // add_image_size( "post-thumbnail", 300, 225, true);
+        // add_image_size( "post-single", 600, 450, true);
 
 		/*
 		 * Switch default core markup for search form, comment form, comments, galleries, captions and widgets
@@ -327,6 +334,18 @@ final class Emertech_Theme {
 		// Customizer class.
 		require_once EMERTECH_INC_DIR . "customizer/customizer.php";
         require_once EMERTECH_INC_DIR . "third/class-kirki-installer-section.php";
+    }
+
+    function set_query_params( $query ) {
+	
+        if( $query->is_main_query() 
+        && !$query->is_feed() ) {
+        
+            if(isset($_GET['category'])) {
+                $category = $_GET['category'];
+                $query->set( 'category_name', $category );
+            }
+        }
     }
 
     public function get_current_year($attr) {

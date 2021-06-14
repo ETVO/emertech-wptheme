@@ -7,14 +7,12 @@
 
 get_header();
 
-$results_title = __("Resultados da pesquisa por", "emertech");
-$search_query = get_search_query();
+// $title = __("Notícias", "emertech");
 
-$blog_id = get_option('page_for_posts');
-$blog_title = get_the_title( $blog_id );
-$blog_url = get_the_permalink( $blog_id );
+$home_id = get_option('page_for_posts');
+$title = get_the_title( $home_id );
 
-$results_title .= " <b>\"$search_query\"</b>";
+$categories_label = __("Categorias");
 
 $title_aos = 'data-aos="fade" data-aos-delay="0"';
 $form_aos = 'data-aos="fade" data-aos-delay="100"';
@@ -25,13 +23,15 @@ $results_aos = 'data-aos="fade" data-aos-delay="200"';
 
     <div class="m-auto col-12 col-sm-11 col-md-10 col-lg-9 px-4 px-md-0">
         <div class="heading row mb-3 mb-md-0">
-            <div class="title col-12 mb-3 col-md-auto mb-md-0" <?php echo $title_aos; ?>>
-                <h2 class="fw-light">
-                    <?php echo $results_title; ?>
-                </h2>
-                <a class="eb-link left fw-light light" href="<?php echo $blog_url; ?>">
-                    <?php echo $blog_title; ?>
-                </a>
+            <div class="title row col-12 mb-3 col-md-auto mb-md-0" <?php echo $title_aos; ?>>
+                <div class="col-auto">
+                    <h2 class=""><?php echo $title; ?></h2>
+                </div>
+                <div class="col-auto">
+                    <div class="categories">
+                        <?php get_template_part("partials/component/categories"); ?>
+                    </div>
+                </div>
             </div>
             <div class="form col-auto ms-auto" <?php echo $form_aos; ?>>
                 <?php get_search_form(); ?>

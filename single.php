@@ -8,7 +8,7 @@
 
     get_header();
 
-    get_template_part("partials/page-single");
+    get_template_part("partials/page/single");
 
     get_footer();
 

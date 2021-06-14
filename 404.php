@@ -7,6 +7,6 @@
 
 get_header();
 
-get_template_part("partials/page-404");
+get_template_part("partials/page/404");
 
 get_footer();

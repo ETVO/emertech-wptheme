@@ -25,4 +25,4 @@ if(is_front_page()) {
 
 	<?php wp_body_open(); ?>
 
-    <?php get_template_part("partials/page-header"); ?>
+    <?php get_template_part("partials/page/header"); ?>

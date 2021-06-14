@@ -1,10 +1,11 @@
-.search-results {
-    .result {
+.feed {
+    .post {
         border-bottom: solid 1px var(--bs-secondary);
         .image {
             img {
                 width: 300px;
                 max-width: 100%;
+                height: auto;
             }
         }
 

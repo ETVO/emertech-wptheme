@@ -27,9 +27,18 @@ body {
 }
 
 a {
-    color: inherit !important;
     transition: color ease-in-out 0.1s;
     text-decoration: none;
+
+    &:not([class *= "btn"]) {    
+        color: inherit !important;
+    }
+
+    &.onhover {
+        &:hover, &:active, &:focus {
+            text-decoration: underline;
+        }
+    }
 }
 
 p {

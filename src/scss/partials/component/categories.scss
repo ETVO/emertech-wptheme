@@ -1,0 +1,9 @@
+.categories {
+    .category {
+        font-size: 0.875rem !important;
+    }
+
+    .category-reset span::before {
+        vertical-align: -0.25rem;
+    }
+}

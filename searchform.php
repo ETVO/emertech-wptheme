@@ -5,6 +5,6 @@
  * @package Emertech WordPress theme
  */
 
-get_template_part("partials/component-searchform");
+get_template_part("partials/component/searchform");
 
 ?>

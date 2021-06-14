@@ -1,9 +1,13 @@
-@import 'partials/bottom.scss';
-@import 'partials/footer.scss';
-@import 'partials/header.scss';
-@import 'partials/floating.scss';
-@import 'partials/content.scss';
-@import 'partials/404.scss';
-@import 'partials/pagination.scss';
-@import 'partials/search.scss';
-@import 'partials/single.scss';
+// Components
+@import 'partials/component/floating.scss';
+@import 'partials/component/pagination.scss';
+@import 'partials/component/feed.scss';
+@import 'partials/component/categories.scss';
+
+// Pages
+@import 'partials/page/bottom.scss';
+@import 'partials/page/footer.scss';
+@import 'partials/page/header.scss';
+@import 'partials/page/content.scss';
+@import 'partials/page/404.scss';
+@import 'partials/page/single.scss';

@@ -12,8 +12,8 @@ $search_label = __('Pesquisar', 'emertech');
 
 <form action="<?php echo esc_url(home_url('/')); ?>" method="get" class="searchform d-flex">
 
-    <div class="row g-2 m-auto">
-        <div class="col-auto">
+    <div class="row g-2">
+        <div class="col-9">
             
             <input type="search" class="form-control" name="s" id="search" 
                 value="<?php the_search_query(); ?>" 

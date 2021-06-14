@@ -120,6 +120,86 @@ final class Emertech_Customizer
          * Section
          */
         $wp_customize->add_section(
+            'emertech_blog',
+            array(
+                'title'    => __('Notícias (blog)', 'emertech'),
+                'priority' => 15,
+                'panel'    => $panel,
+            )
+        );
+        
+        Kirki::add_field( 'emertech_blog_feed', [
+            'type' => 'custom',
+            'settings' => 'emertech_blog_feed',
+            'section' => 'emertech_blog',
+            'default' => '<h3 style="padding:15px 10px; background:#fff; margin:0;">' . __( 'Posts do Feed', 'kirki' ) . '</h3>',
+            'priority' => 10,
+        ] );
+
+        /**
+         * Show Date in Feed Posts  
+         */
+        $wp_customize->add_setting(
+            'emertech_blog_feed_show_date', 
+            array(
+            )
+        );
+
+        Kirki::add_field( 
+            'emertech_blog_feed_show_date', 
+            array(
+                'type'        => 'checkbox',
+                'settings'    => 'emertech_blog_feed_show_date',
+                'section'     => 'emertech_blog',
+                'label' => __('Exibir Data', 'emertech'),
+                'default'     => true,   
+            )
+        );
+
+        /**
+         * Show Category in Feed Posts  
+         */
+        $wp_customize->add_setting(
+            'emertech_blog_feed_show_category', 
+            array(
+            )
+        );
+
+        Kirki::add_field( 
+            'emertech_blog_feed_show_category', 
+            array(
+                'type'        => 'checkbox',
+                'settings'    => 'emertech_blog_feed_show_category',
+                'section'     => 'emertech_blog',
+                'label' => __('Exibir Categoria', 'emertech'),
+                'default'     => true,   
+            )
+        );
+
+        /**
+         * Meta separator 
+         */
+        $wp_customize->add_setting(
+            'emertech_blog_feed_meta_separator', 
+            array(
+            )
+        );
+
+        Kirki::add_field(
+            'emertech_blog_feed_meta_separator', 
+            array(
+                'type' => 'text',
+                'settings' => 'emertech_blog_feed_meta_separator',
+                'section' => 'emertech_blog',
+                'label' => __('Separador', 'emertech'),
+                'default' => '•'
+            )
+        );
+
+        /**
+         * Section
+         */
+        $wp_customize->add_section(
             'emertech_footer',
             array(
                 'title'    => __('Rodapé', 'emertech'),

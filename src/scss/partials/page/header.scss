@@ -143,7 +143,17 @@ header {
     header {
 
         .custom-logo {
-            width: 180px;
+            width: 180px !important;
         }
     }
 } 
+ 
+// @media all and (max-width:300px) {
+    
+//     header {
+
+//         .custom-logo {
+//             width: 150px;
+//         }
+//     }
+// } 
