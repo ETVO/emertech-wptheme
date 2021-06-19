@@ -5,8 +5,6 @@
  * @package Emertech WordPress theme
  */
 
-use Emertech_SVG_Support as GlobalEmertech_SVG_Support;
-
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -19,6 +17,8 @@ class Emertech_SVG_Support {
 
     /**
      * Add filters and actions of class functions
+     * 
+     * @since 1.0
      */
     public function __construct() {
         
@@ -32,12 +32,14 @@ class Emertech_SVG_Support {
 
     /**
      * Check file type and extension
+     * 
+     * @since 1.0
      */
     public function check_type_and_ext($data, $file, $filename, $mimes) {
-        global $wp_version;
-        if ( $wp_version !== '4.7.1' ) {
-            return $data;
-        }
+        // global $wp_version;
+        // if ( $wp_version !== '4.7.1' ) {
+        //     return $data;
+        // }
         
         $filetype = wp_check_filetype( $filename, $mimes );
         
@@ -52,6 +54,7 @@ class Emertech_SVG_Support {
      * Add SVG image filetype to WP mimes array 
      *
      * @param [array] $mimes
+     * @since 1.0
      */
     function cc_mime_types( $mimes ){
         $mimes['svg'] = 'image/svg+xml';
@@ -60,6 +63,8 @@ class Emertech_SVG_Support {
 
     /**
      * Sanitize SVG Files
+     * 
+     * @since 1.0
      */
     function sanitize_svg() {
         echo '<style type="text/css">
