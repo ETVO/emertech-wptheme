@@ -3,7 +3,7 @@
  * This file adds a custom section in the customizer that recommends the installation of the Kirki plugin.
  * It can be used as-is in themes (drop-in).
  *
- * @package kirki-helpers
+ * @package Emertech WordPress theme
  */
 
 if ( ! function_exists( 'kirki_installer_register' ) ) {

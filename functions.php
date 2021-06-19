@@ -319,7 +319,7 @@ final class Emertech_Theme {
     /**
      * Code to be inserted in WP head
 	 *
-	 * @since 
+	 * @since 1.0
      */
     public function head_code() {
     }
@@ -328,6 +328,7 @@ final class Emertech_Theme {
      * Load theme classes
      *
      * @return void
+	 * @since   2.0
      */
     public function classes() {
         
@@ -336,6 +337,12 @@ final class Emertech_Theme {
         require_once EMERTECH_INC_DIR . "third/class-kirki-installer-section.php";
     }
 
+    /**
+     * Set query params for blog page by using the GET params
+     *
+     * @param [array] $query
+	 * @since   3.0
+     */
     function set_query_params( $query ) {
 	
         if( $query->is_main_query() 
@@ -348,6 +355,13 @@ final class Emertech_Theme {
         }
     }
 
+    /**
+     * Get current year function for shortcode
+     *
+     * @param [array] $attr
+     * @return integer
+	 * @since   2.0
+     */
     public function get_current_year($attr) {
         return date('Y');
     }
