@@ -61,7 +61,7 @@ final class Emertech_Theme {
 	 *
 	 * @since   1.0
      */
-    public function emertech_constants() {
+    public static function emertech_constants() {
 
         $version = self::theme_version();
 
@@ -87,13 +87,13 @@ final class Emertech_Theme {
 	 *
 	 * @since   1.0
      */
-    public function emertech_setup() {
+    public static function emertech_setup() {
         
         // Path of include directory
         $dir = EMERTECH_INC_DIR;
 
-        require_once $dir . "walker/menu_walker_class.php";
-        // require_once $dir . "svg/svg_support_class.php";
+        require_once $dir . "walker/menu-walker.php";
+		require_once $dir . "customizer/customizer.php";
     }
 
     /**
@@ -101,7 +101,7 @@ final class Emertech_Theme {
 	 *
 	 * @since   1.0
      */
-    public function theme_setup() {
+    public static function theme_setup() {
         // Let WordPress handle Title Tag
         add_theme_support( "title-tag");
 
@@ -167,7 +167,7 @@ final class Emertech_Theme {
 	 *
 	 * @since   1.0
      */
-    public function emertech_login_style() {
+    public static function emertech_login_style() {
 
         // Setup constants
         $dir = EMERTECH_CSS_DIR_URI;
@@ -195,7 +195,7 @@ final class Emertech_Theme {
 	 *
 	 * @since   1.0
      */
-    public function emertech_login_logo_url() {
+    public static function emertech_login_logo_url() {
         return home_url();
     }
     
@@ -204,7 +204,7 @@ final class Emertech_Theme {
 	 *
 	 * @since   1.0
      */
-    public function emertech_login_logo_url_title() {
+    public static function emertech_login_logo_url_title() {
         return get_bloginfo( "name" );
     }
 
@@ -213,7 +213,7 @@ final class Emertech_Theme {
 	 *
 	 * @since   1.0
      */
-    public function theme_css() {
+    public static function theme_css() {
 
         // Get CSS directory URI
         $dir = EMERTECH_CSS_DIR_URI;
@@ -241,7 +241,7 @@ final class Emertech_Theme {
 	 *
 	 * @since   1.0
      */
-    public function theme_js() {
+    public static function theme_js() {
         
 		// Get JS directory URI
 		$dir = EMERTECH_JS_DIR_URI;
@@ -261,7 +261,7 @@ final class Emertech_Theme {
 	 *
 	 * @since   1.0
      */
-    public function theme_admin_css() {
+    public static function theme_admin_css() {
 
         // Get CSS directory URI
         $dir = EMERTECH_CSS_DIR_URI;
@@ -286,7 +286,7 @@ final class Emertech_Theme {
      * 
      * @since 1.0
      */
-    public function theme_admin_js() {
+    public static function theme_admin_js() {
         
 		// Get JS directory URI
 		$dir = EMERTECH_JS_DIR_URI;
@@ -303,7 +303,7 @@ final class Emertech_Theme {
 	 *
 	 * @since   1.0
      */
-    public function theme_fonts() {
+    public static function theme_fonts() {
 
         // Get fonts directory URI
         $dir = EMERTECH_FONT_DIR_URI;
@@ -321,7 +321,7 @@ final class Emertech_Theme {
 	 *
 	 * @since 1.0
      */
-    public function head_code() {
+    public static function head_code() {
     }
 
     /**
@@ -330,11 +330,12 @@ final class Emertech_Theme {
      * @return void
 	 * @since   2.0
      */
-    public function classes() {
+    public static function classes() {
         
-		// Customizer class.
-		require_once EMERTECH_INC_DIR . "customizer/customizer.php";
-        require_once EMERTECH_INC_DIR . "third/class-kirki-installer-section.php";
+        // Path of include directory
+        $dir = EMERTECH_INC_DIR;
+
+        require_once $dir . "third/kirki-installer-section.php";
     }
 
     /**
