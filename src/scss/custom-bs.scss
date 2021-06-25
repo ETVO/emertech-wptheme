@@ -16,6 +16,10 @@ $font-family-sans-serif: 'Proxima Nova Alt', 'Segoe UI', Tahoma, Geneva, Verdana
 $body-bg: $dark;
 $body-color: $light;
 
+$tooltip-color: white;
+$tooltip-bg: var(--bs-primary);
+$tooltip-arrow-color: var(--bs-primary);
+
 $font-size-base: 1rem;
 $lead-font-size: $font-size-base * 1;
 

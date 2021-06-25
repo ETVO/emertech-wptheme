@@ -35,18 +35,19 @@
         content: "\f138";
         vertical-align: -12.5%;
     }
-
+    
+    &.left::before {
+        content: "\f12f";
+    }
+    
+    &.up::before {
+        content: "\f148";
+    }
+    
     &.down::before {
         content: "\f128";
     }
 
-    &.up::before {
-        content: "\f148";
-    }
-
-    &.left::before {
-        content: "\f12f";
-    }
 
     &.ico-lg::before {
         font-size: 1.5rem;

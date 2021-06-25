@@ -46,7 +46,7 @@ final class Emertech_Theme {
         else {
             add_action( "login_enqueue_scripts", array(EMERTECH_THEME_CLASS, "emertech_login_style" ) );
             add_action( "wp_enqueue_scripts", array( EMERTECH_THEME_CLASS, "theme_css" ) );
-            add_action( "wp_enqueue_scripts", array( EMERTECH_THEME_CLASS, "theme_js" ) );
+            add_action( "wp_enqueue_scripts", array( EMERTECH_THEME_CLASS, "theme_js" ), 1 );
             add_action( "wp_enqueue_scripts", array( EMERTECH_THEME_CLASS, "theme_fonts" ) );
         }
 
@@ -253,7 +253,7 @@ final class Emertech_Theme {
 		wp_enqueue_script( "emertech-script", $dir . "app.js", array( "jquery"), $theme_version, true);
         
 		// Register bootstrap script
-		wp_enqueue_script( "bootstrap", $dir . "third/bootstrap.min.js", array( "jquery"), $theme_version, true);
+		// wp_enqueue_script( "bootstrap", $dir . "third/bootstrap.bundle.min.js", array( "jquery"), $theme_version, true);
     }
 
     /**
@@ -344,7 +344,7 @@ final class Emertech_Theme {
      * @param [array] $query
 	 * @since   3.0
      */
-    function set_query_params( $query ) {
+    public static function set_query_params( $query ) {
 	
         if( $query->is_main_query() 
         && !$query->is_feed() ) {
@@ -363,7 +363,7 @@ final class Emertech_Theme {
      * @return integer
 	 * @since   2.0
      */
-    public function get_current_year($attr) {
+    public static function get_current_year($attr) {
         return date('Y');
     }
 

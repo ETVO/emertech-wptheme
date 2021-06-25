@@ -415,6 +415,40 @@ final class Emertech_Customizer
                 ],
             ]
         ] );
+        
+
+        /**
+         * Section
+         */
+        $wp_customize->add_section(
+            'emertech_transform',
+            array(
+                'title'    => __('Transformações', 'emertech'),
+                'priority' => 40,
+                'panel'    => $panel,
+            )
+        );
+
+        /**
+         * Form Title
+         */
+        $wp_customize->add_setting(
+            'emertech_transform_form_title', 
+            array(
+                'default' => __('Solicite um Orçamento')
+            )
+        );
+
+        Kirki::add_field(
+            'emertech_transform_form_title', 
+            array(
+                'type' => 'text',
+                'settings' => 'emertech_transform_form_title',
+                'section' => 'emertech_transform',
+                'label' => __('Título do Formulário', 'emertech'),
+                'description' => __('Deixar em branco caso queira ocultar', 'emertech'),
+            )
+        );
     }
 }
 

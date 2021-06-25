@@ -25,7 +25,7 @@ if($show_video):
 <?php endif; ?>
 
 <header class="navbar navbar-expand-lg pe-3 pe-lg-4 ps-0 py-3 text-light">
-	<div data-aos="fade" class="container-fluid p-0">
+	<div class="container-fluid p-0">
 		<div class="navbar-brand me-auto p-0">
 			<!--
 			<?php

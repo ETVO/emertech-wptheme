@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    overflow-y: hidden;
+    overflow-y: visible;
     overflow-x: hidden;
     max-width: 100vw;
 }
@@ -76,6 +76,10 @@ p {
 iframe {
     border-radius: 0.25rem;
     width: 100%;
+}
+
+.form-check, .form-check-label {
+    cursor: pointer;
 }
 
 @media all and (max-width: 1024px) {
