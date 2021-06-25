@@ -1,4 +1,5 @@
 import "./partials/header.js";
+import "./components";
 window.bootstrap = require('bootstrap/dist/js/bootstrap.bundle.js');
 
 import AOS from "aos";

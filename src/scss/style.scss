@@ -31,7 +31,7 @@ a {
     text-decoration: none;
 
     &:not([class *= "btn"]) {    
-        color: inherit !important;
+        color: inherit;
     }
 
     &.onhover {
@@ -44,6 +44,44 @@ a {
 p {
     margin-bottom: 0.5rem;
     font-weight: 300;
+
+    
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    a {
+        
+        &:hover, &:active, &:focus {
+            color: var(--bs-primary) !important;
+        }
+
+        &[href^="http://"],
+        &[href^="https://"] {
+            text-decoration: none !important;
+
+            &::after {
+
+                content: '\f1c5';
+                color: var(--bs-primary);
+                font-family: bootstrap-icons;
+                font-size: .75rem;
+                margin-left: .4rem;
+            }
+        }
+
+        &:not([href^="https://www.emertech"]),
+        :not([href^="http://www.emertech"]),
+        :not([href^="https://emertech"]),
+        :not([href^="http://emertech"]) {
+            background: none;
+            padding-right: 0;
+            text-decoration: underline !important;
+
+            &::after {
+                content: '';
+            }
+        }
+    }
 }
 
 .page-title h1 {

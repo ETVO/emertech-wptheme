@@ -47,15 +47,71 @@
     &.down::before {
         content: "\f128";
     }
-
-
-    &.ico-lg::before {
-        font-size: 1.5rem;
+    
+    &.plus::before {
+        content: "\f4fe";
     }
-
+    
     &.no-ico::before {
         content: '';
     }
+
+    &.after {
+
+        &::before {
+            content: none;
+        }
+
+        &::after, 
+        &.right::after {
+            text-decoration: none !important;
+            font-family: bootstrap-icons;
+            color: var(--bs-primary);
+            content: "\f138";
+            vertical-align: -12.5%;
+        }
+        
+        &.left::after {
+            content: "\f12f";
+        }
+        
+        &.up::after {
+            content: "\f148";
+        }
+        
+        &.down::after {
+            content: "\f128";
+        }
+    
+        &.plus::before {
+            content: "\f4fe";
+        }
+        
+        &.no-ico::after {
+            content: '';
+        }
+    }
+    
+    &.primary-ico::before,
+    &.primary-ico::after {
+        color: var(--bs-primary) !important;
+    }
+
+    &.dark-ico::before,
+    &.dark-ico::after {
+        color: var(--bs-dark) !important;
+    }
+
+    &.light-ico::before,
+    &.light-ico::after {
+        color: var(--bs-light) !important;
+    }
+
+    &.ico-lg::before, 
+    &.ico-lg::after {
+        font-size: 1.5rem;
+    }
+    
 }
 
 .h-90 {
