@@ -6,12 +6,14 @@
  */
 
 $error_code = "404";
-$error_message = __("Nenhuma página foi encontrada!", "emertech");
-$search_message = __("Pesquise pelo que precisa", "emertech");
+
+$error_message = get_theme_mod( 'emertech_strings_404_message' );
+if($error_message == '') $error_message = __('Nenhuma página foi encontrada!');
 
 $title_aos = 'data-aos="fade-right" data-aos-delay="0"';
 $message_aos = 'data-aos="fade-right" data-aos-delay="100"';
 $search_aos = 'data-aos="fade-right" data-aos-delay="200"';
+
 ?>
 
 <div class="page404 d-flex">
@@ -27,9 +29,6 @@ $search_aos = 'data-aos="fade-right" data-aos-delay="200"';
             </p>
         </div>
         <div class="search" <?php echo $search_aos; ?>>
-            <!-- <small>
-                <?php echo $search_message; ?>
-            </small> -->
             <?php get_search_form(); ?>
         </div>
     </div>

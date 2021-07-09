@@ -19,7 +19,6 @@
                     $(this).css('cursor', 'pointer');
 
                     $(this).on('click', () => {
-                        console.log('hey');
                         window.location.href = href;
                         return;
                     });

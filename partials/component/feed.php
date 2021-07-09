@@ -5,7 +5,9 @@
  * @package Emertech WordPress theme
  */
 
-$action_text = __("Leia Mais", "emertech"); 
+// $action_text = __("Leia Mais", "emertech"); 
+$action_text = get_theme_mod( 'emertech_strings_read_more' ); 
+if($action_text == '') $action_text = __('Leia Mais');
 
 // Initialize meta data array
 $meta = array(

@@ -11,8 +11,8 @@ $nav_aos = 'data-aos="fade" data-aos-delay="100"' . $common_aos;
 $contact_aos = 'data-aos="fade" data-aos-delay="300"' . $common_aos;
 $map_aos = 'data-aos="fade" data-aos-delay="400"' . $common_aos;
 
-$contact_no = get_theme_mod("emertech_footer_contact");
-$contact_no_url = "tel:$contact_no";
+$tel_no = get_theme_mod("emertech_footer_tel");
+$tel_no_url = "tel:$tel_no";
 
 $email = get_theme_mod("emertech_footer_email");
 $email_url = "mailto:$email";
@@ -31,8 +31,8 @@ $contact_title = get_theme_mod( 'emertech_footer_title', 'EMERTECH PROJECT' );
 $contact_items = array(
     array(
         'icon' => 'telephone-fill',
-        'text' => $contact_no,
-        'url' => $contact_no_url,
+        'text' => $tel_no,
+        'url' => $tel_no_url,
     ),
     array(
         'icon' => 'envelope-fill',

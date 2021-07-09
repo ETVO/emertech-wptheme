@@ -99,9 +99,11 @@ foreach($meta as $property) {
                 <?php echo $excerpt; ?>
             </p>
         </div>
-        <div class="image mb-3">
-            <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>" class="img-fluid rounded">
-        </div>
+        <?php if($image_url): ?>
+            <div class="image mb-3">
+                <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>" class="img-fluid rounded">
+            </div>
+        <?php endif; ?>
         <div class="content">
             <?php echo $content; ?>
         </div>

@@ -21,7 +21,7 @@ $author_uri = esc_html($theme->get('AuthorURI'));
 <div class="page-bottom d-flex py-2 p-md-1">
     <small class="m-auto text-center text" <?php echo $text_aos; ?>>
         <?php echo do_shortcode('[year]'); ?> © <strong><?php echo $name; ?></strong>. <br class="d-block d-md-none">
-        Desenvolvido por 
+        <?php echo __('Desenvolvido por'); ?> 
         <a href="<?php echo $author_uri; ?>" target="_blank"><?php echo $author; ?></a>.
     </small>
 </div>

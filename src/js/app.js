@@ -50,3 +50,17 @@ jQuery(document).ready(function ($) {
     //     $(this).addClass(className);
     // });
 });
+
+jQuery(document).ready(function() {
+    var loader = jQuery('#loadingContainer');
+    var spinner = jQuery('#spinner');
+
+    setTimeout(()=> {
+        loader.animate(
+            {
+                opacity: 'toggle'
+            },
+            500
+        )
+    }, 100)
+});
