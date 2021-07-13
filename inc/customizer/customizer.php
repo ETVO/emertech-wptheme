@@ -437,6 +437,30 @@ final class Emertech_Customizer
         );
 
         /**
+         * Form Title
+         */
+        $wp_customize->add_setting(
+            'emertech_transform_per_page', 
+            array(
+                'default' => 8
+            )
+        );
+
+        Kirki::add_field(
+            'emertech_transform_per_page', 
+            array(
+                'type' => 'number',
+                'settings' => 'emertech_transform_per_page',
+                'section' => 'emertech_transform',
+                'label' => __('Registros por página (catálogo completo)', 'emertech'),
+                'description' => __('Deixe "0" para usar o valor padrão definido no WordPress', 'emertech'),
+                'min' => 0,
+                'max' => 16,
+                'default' => 8
+            )
+        );
+
+        /**
          * ----------------- Inner Section ----------------
          */
         Kirki::add_field( 
