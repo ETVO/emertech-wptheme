@@ -34,7 +34,9 @@ $post = get_post();
                     
 $permalink = esc_url(get_the_permalink());
 
-$has_image = has_post_thumbnail();
+$show_image = get_post_meta($post->ID, 'et_post_show_image', true) == 'yes';
+
+$has_image = has_post_thumbnail() && $show_image;
 $image_url = get_the_post_thumbnail_url($post->ID, 'medium_large');
 $image_alt = get_the_post_thumbnail_caption();
 
@@ -99,7 +101,7 @@ foreach($meta as $property) {
                 <?php echo $excerpt; ?>
             </p>
         </div>
-        <?php if($image_url): ?>
+        <?php if($has_image): ?>
             <div class="image mb-3">
                 <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>" class="img-fluid rounded">
             </div>

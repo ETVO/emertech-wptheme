@@ -94,6 +94,7 @@ final class Emertech_Theme {
 
         require_once $dir . "walker/menu-walker.php";
 		require_once $dir . "customizer/customizer.php";
+		require_once $dir . "metabox/post.php";
     }
 
     /**
