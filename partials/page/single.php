@@ -42,7 +42,6 @@ $image_alt = get_the_post_thumbnail_caption();
 
 $title = get_the_title();
 $excerpt = get_the_excerpt();
-$content = get_the_content();
 
 $date = get_the_date();
 $categories = get_the_category();
@@ -107,7 +106,7 @@ foreach($meta as $property) {
             </div>
         <?php endif; ?>
         <div class="content">
-            <?php echo $content; ?>
+            <?php the_content(); ?>
         </div>
         <div class="after-content">
         </div>
