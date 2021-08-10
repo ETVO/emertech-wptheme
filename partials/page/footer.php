@@ -49,7 +49,7 @@ $contact_items = array(
 $social_icons = get_theme_mod("emertech_social_icons");
 
 ?>
-<footer>
+<footer id="footer">
     <div class="container-fluid py-4 py-md-4 px-lg-5 text-light">
         <div class="col-12 col-lg-10 m-auto px-lg-5">
             <div class="d-flex m-auto pb-3">

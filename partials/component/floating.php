@@ -18,7 +18,7 @@ if(!$hide && $floating_url != ''):
 ?>
 <a class="floating position-fixed d-flex rounded-pill"  
 <?php if($newtab) echo 'target="_blank"'; ?>
-href="<?php echo $floating_url; ?>" >
+href="<?php echo $floating_url; ?>" id="floating">
     <span class="bi bi-<?php echo $floating_icon; ?> m-auto"></span>
     <?php if($floating_text): ?>
         <h6 class="my-auto ms-2 text-uppercase fw-light">

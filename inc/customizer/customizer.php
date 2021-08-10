@@ -632,96 +632,96 @@ final class Emertech_Customizer
         /**
          * Form fields
          */
-        $wp_customize->add_setting(
-            'emertech_transform_form_fields', 
-            array(
-                'default' => ''
-            )
-        );
+        // $wp_customize->add_setting(
+        //     'emertech_transform_form_fields', 
+        //     array(
+        //         'default' => ''
+        //     )
+        // );
 
-        Kirki::add_field( 
-            'emertech_transform_form_fields', 
-            array(
-                'type'        => 'repeater',
-                'section'     => 'emertech_transform',
-                'settings'     => 'emertech_transform_form_fields',
-                'priority'    => 10,
-                'label'       => esc_html__( 'Campos do formulário', 'emertech' ),
-                'row_label' => [
-                    'type'  => 'field',
-                    'value' => esc_html__( 'Campo', 'emertech' ),
-                    'field' => 'label',
-                ],
-                'button_label' => esc_html__('Adicionar novo', 'emertech' ),
-                'default'      => [
-                    [
-                        'type' => 'text',
-                        'label'  => __('Nome'),
-                        'required' => true
-                    ],
-                    [
-                        'type' => 'text',
-                        'label'  => __('Companhia'),
-                        'required' => true
-                    ],
-                    [
-                        'type' => 'email',
-                        'label'  => __('Email'),
-                        'required' => true
-                    ],
-                    [
-                        'type' => 'textarea',
-                        'label'  => __('Mensagem'),
-                        'required' => false
-                    ],
-                ],
-                'fields' => [
-                    'label'  => [
-                        'type' => 'text',
-                        'label' => __('Rótulo do campo', 'emertech'),
-                    ],
-                    'type' => [
-                        'type' => 'select',
-                        'label' => __('Tipo do campo', 'emertech'),
-                        'choices' => array(
-                            'text' => __('Texto', 'emertech'),
-                            'email' => __('Email', 'emertech'),
-                            'textarea' => __('Área de texto', 'emertech'),
-                            'number' => __('Número', 'emertech'),
-                            'date' => __('Data', 'emertech'),
-                            'color' => __('Cor', 'emertech'),
-                            'checkbox' => __('Caixa de Seleção', 'emertech'),
-                            'radio' => __('Opções (separe-as com ; no rótulo)', 'emertech'),
-                            'custom' => __('Seção customizada', 'emertech'),
-                        ),
-                    ],
-                    'placeholder'  => [
-                        'type' => 'text',
-                        'label' => __('Dica padrão', 'emertech'),
-                        'description' => __('Texto de sugestão de input', 'emertech'),
-                    ],
-                    'required'  => [
-                        'type' => 'checkbox',
-                        'label' => __('Obrigatório?', 'emertech'),
-                    ],
-                    'min'  => [
-                        'type' => 'number',
-                        'label' => __('Valor mínimo', 'emertech'),
-                        'description' => __('Somente para campos de número', 'emertech'),
-                    ],
-                    'max'  => [
-                        'type' => 'number',
-                        'label' => __('Valor máximo', 'emertech'),
-                        'description' => __('Somente para campos de número', 'emertech'),
-                    ],
-                    'step'  => [
-                        'type' => 'number',
-                        'label' => __('Intervalo de número', 'emertech'),
-                        'description' => __('Somente para campos de número', 'emertech'),
-                    ],
-                ]
-            )
-        );
+        // Kirki::add_field( 
+        //     'emertech_transform_form_fields', 
+        //     array(
+        //         'type'        => 'repeater',
+        //         'section'     => 'emertech_transform',
+        //         'settings'     => 'emertech_transform_form_fields',
+        //         'priority'    => 10,
+        //         'label'       => esc_html__( 'Campos do formulário', 'emertech' ),
+        //         'row_label' => [
+        //             'type'  => 'field',
+        //             'value' => esc_html__( 'Campo', 'emertech' ),
+        //             'field' => 'label',
+        //         ],
+        //         'button_label' => esc_html__('Adicionar novo', 'emertech' ),
+        //         'default'      => [
+        //             [
+        //                 'type' => 'text',
+        //                 'label'  => __('Nome'),
+        //                 'required' => true
+        //             ],
+        //             [
+        //                 'type' => 'text',
+        //                 'label'  => __('Companhia'),
+        //                 'required' => true
+        //             ],
+        //             [
+        //                 'type' => 'email',
+        //                 'label'  => __('Email'),
+        //                 'required' => true
+        //             ],
+        //             [
+        //                 'type' => 'textarea',
+        //                 'label'  => __('Mensagem'),
+        //                 'required' => false
+        //             ],
+        //         ],
+        //         'fields' => [
+        //             'label'  => [
+        //                 'type' => 'text',
+        //                 'label' => __('Rótulo do campo', 'emertech'),
+        //             ],
+        //             'type' => [
+        //                 'type' => 'select',
+        //                 'label' => __('Tipo do campo', 'emertech'),
+        //                 'choices' => array(
+        //                     'text' => __('Texto', 'emertech'),
+        //                     'email' => __('Email', 'emertech'),
+        //                     'textarea' => __('Área de texto', 'emertech'),
+        //                     'number' => __('Número', 'emertech'),
+        //                     'date' => __('Data', 'emertech'),
+        //                     'color' => __('Cor', 'emertech'),
+        //                     'checkbox' => __('Caixa de Seleção', 'emertech'),
+        //                     'radio' => __('Opções (separe-as com ; no rótulo)', 'emertech'),
+        //                     'custom' => __('Seção customizada', 'emertech'),
+        //                 ),
+        //             ],
+        //             'placeholder'  => [
+        //                 'type' => 'text',
+        //                 'label' => __('Dica padrão', 'emertech'),
+        //                 'description' => __('Texto de sugestão de input', 'emertech'),
+        //             ],
+        //             'required'  => [
+        //                 'type' => 'checkbox',
+        //                 'label' => __('Obrigatório?', 'emertech'),
+        //             ],
+        //             'min'  => [
+        //                 'type' => 'number',
+        //                 'label' => __('Valor mínimo', 'emertech'),
+        //                 'description' => __('Somente para campos de número', 'emertech'),
+        //             ],
+        //             'max'  => [
+        //                 'type' => 'number',
+        //                 'label' => __('Valor máximo', 'emertech'),
+        //                 'description' => __('Somente para campos de número', 'emertech'),
+        //             ],
+        //             'step'  => [
+        //                 'type' => 'number',
+        //                 'label' => __('Intervalo de número', 'emertech'),
+        //                 'description' => __('Somente para campos de número', 'emertech'),
+        //             ],
+        //         ]
+        //     )
+        // );
 
         /**
          * Transform form submit button text

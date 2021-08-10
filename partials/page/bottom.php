@@ -18,7 +18,7 @@ $theme = wp_get_theme();
 $author = esc_html($theme->get('Author'));
 $author_uri = esc_html($theme->get('AuthorURI'));
 ?>
-<div class="page-bottom d-flex py-2 p-md-1">
+<div class="page-bottom d-flex py-2 p-md-1" id="bottom">
     <small class="m-auto text-center text" <?php echo $text_aos; ?>>
         <?php echo do_shortcode('[year]'); ?> © <strong><?php echo $name; ?></strong>. <br class="d-block d-md-none">
         <?php echo __('Desenvolvido por'); ?> 
