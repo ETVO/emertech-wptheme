@@ -616,6 +616,7 @@ final class Emertech_Customizer
         $wp_customize->add_setting(
             'emertech_transform_form_hide', 
             array(
+                'default' => 0
             )
         );
 
@@ -626,6 +627,7 @@ final class Emertech_Customizer
                 'settings' => 'emertech_transform_form_hide',
                 'section' => 'emertech_transform',
                 'label' => __('Ocultar formulário', 'emertech'),
+                'default' => 0
             )
         );
 
@@ -745,27 +747,6 @@ final class Emertech_Customizer
         );
 
         /**
-         * Transform form submit button text
-         */
-        $wp_customize->add_setting(
-            'emertech_transform_form_submit', 
-            array(
-                'default' => __('Solicitar'),
-            )
-        );
-
-        Kirki::add_field(
-            'emertech_transform_form_submit', 
-            array(
-                'type' => 'text',
-                'settings' => 'emertech_transform_form_submit',
-                'section' => 'emertech_transform',
-                'label' => __('Texto do Botão de envio', 'emertech'),
-                'default' => __('Solicitar'),
-            )
-        );
-
-        /**
          * Transform form target email 
          */
         $wp_customize->add_setting(
@@ -787,22 +768,22 @@ final class Emertech_Customizer
         /**
          * Transform form generate report 
          */
-        $wp_customize->add_setting(
-            'emertech_transform_generate_report', 
-            array(
-            )
-        );
+        // $wp_customize->add_setting(
+        //     'emertech_transform_generate_report', 
+        //     array(
+        //     )
+        // );
 
-        Kirki::add_field(
-            'emertech_transform_generate_report', 
-            array(
-                'type' => 'checkbox',
-                'settings' => 'emertech_transform_generate_report',
-                'section' => 'emertech_transform',
-                'label' => __('Gerar 2ª via de relatório?', 'emertech'),
-                'description' => __('Relatório constando todos os dados preenchidos e opcionais solicitados', 'emertech'),
-            )
-        );
+        // Kirki::add_field(
+        //     'emertech_transform_generate_report', 
+        //     array(
+        //         'type' => 'checkbox',
+        //         'settings' => 'emertech_transform_generate_report',
+        //         'section' => 'emertech_transform',
+        //         'label' => __('Gerar 2ª via de relatório?', 'emertech'),
+        //         'description' => __('Relatório constando todos os dados preenchidos e opcionais solicitados', 'emertech'),
+        //     )
+        // );
 
         /**
          * ----------------- Inner Section ----------------

@@ -140,6 +140,9 @@ final class Emertech_Theme {
 
 		// Enable support for Post Thumbnails on posts and pages.
 		add_theme_support( 'post-thumbnails' );
+
+		// Enable support for excerpt text on posts and pages.
+        add_post_type_support( 'page', 'excerpt' );
         
         // Add different image predefined sizes (NOT BEING USED A.T.M.)
         // add_image_size( "post-thumbnail", 300, 225, true);
